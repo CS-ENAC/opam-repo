@@ -11,8 +11,8 @@ simulated processor.
 maintainer: ["Cyril Allignol <cyril.allignol@enac.fr>"]
 authors: ["Cyril Allignol <cyril.allignol@enac.fr>"]
 license: "GPL-3.0-or-later"
-homepage: "https://github.com/cyril-allignol/compiler-enac"
-bug-reports: "https://github.com/cyril-allignol/compiler-enac/issues"
+homepage: "https://github.com/CS-ENAC/libcompiler"
+bug-reports: "https://github.com/CS-ENAC/libcompiler/issues"
 depends: [
   "dune" {>= "2.8"}
   "menhir"
@@ -33,7 +33,7 @@ build: [
     "@doc" {with-doc}
   ]
 ]
-dev-repo: "git+https://github.com/cyril-allignol/compiler-enac.git"
+dev-repo: "git+https://github.com/CS-ENAC/libcompiler.git"
 url {
-  src: "https://github.com/cyril-allignol/compiler-enac/archive/refs/tags/v2021.tar.gz"
+  src: "https://github.com/CS-ENAC/libcompiler/archive/refs/tags/v2021.tar.gz"
 }
