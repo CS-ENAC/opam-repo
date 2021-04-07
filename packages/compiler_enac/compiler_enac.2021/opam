@@ -1,0 +1,39 @@
+opam-version: "2.0"
+version: "2021"
+synopsis: "Library for the compiler workshop"
+description: """
+This is the library for the compiler workshop at ENAC.
+It provides modules for building an AST for the source
+language, implementing instructions for the target
+architecture, and executing the compiled programs on a
+simulated processor.
+"""
+maintainer: ["Cyril Allignol <cyril.allignol@enac.fr>"]
+authors: ["Cyril Allignol <cyril.allignol@enac.fr>"]
+license: "GPL-3.0-or-later"
+homepage: "https://github.com/cyril-allignol/compiler-enac"
+bug-reports: "https://github.com/cyril-allignol/compiler-enac/issues"
+depends: [
+  "dune" {>= "2.8"}
+  "menhir"
+  "graphics"
+  "odoc" {with-doc}
+]
+build: [
+  ["dune" "subst"] {dev}
+  [
+    "dune"
+    "build"
+    "-p"
+    name
+    "-j"
+    jobs
+    "@install"
+    "@runtest" {with-test}
+    "@doc" {with-doc}
+  ]
+]
+dev-repo: "git+https://github.com/cyril-allignol/compiler-enac.git"
+url {
+  src: "https://github.com/cyril-allignol/compiler-enac/archive/refs/tags/v2021.tar.gz"
+}
